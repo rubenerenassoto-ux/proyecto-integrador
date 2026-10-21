@@ -24,10 +24,12 @@ Después abrir `index.html` con el navegador.
 
 ## Uso de IA
 
-He usado ChatGPT en dos momentos:
+He usado ChatGPT en dos momentos, y en los dos casos los cambios los he hecho yo a mano:
 
-1. **Estilos del menú.** Le pregunté cómo hacer que el menú de arriba se viera bien en el móvil. Me propuso usar `display: flex` con `flex-wrap: wrap` en el header y eso es lo que usé, pero los colores, márgenes y tamaños los elegí yo.
-2. **Revisión de contacto.html.** Antes de hacer el commit le pasé el `git diff` del formulario para que lo revisara y me diera ideas para el mensaje del commit. Me dijo que las etiquetas `label` no tenían el atributo `for`, lo corregí yo y el mensaje del commit lo elegí yo.
+1. **Menú en el móvil.** Le pasé el CSS del `header` y del menú y le pregunté cómo hacer que se viera bien en pantallas pequeñas. Me propuso una media query (`@media (max-width: 600px)`) que pone el título y el menú uno debajo del otro (`flex-direction: column`), los centra y reduce el margen de los enlaces. La apliqué y además le bajé el `padding` del header a 15px, porque 30px a los lados en el móvil era mucho. Commit: "Adapta el menú a pantallas pequeñas".
+2. **Revisión del formulario de contacto.** Le pasé el formulario de `contacto.html` para que lo revisara. Me dijo que no había errores graves y que los `label` ya estaban bien asociados con `for` e `id`, y me sugirió tres cosas: poner `required` en los campos, un `placeholder` en el mensaje y `autocomplete` en nombre y correo. Puse el `required` y el `placeholder`. El `autocomplete` lo dejé fuera para no complicar el formulario. Commit: "Marca como obligatorios los campos del formulario".
+
+Antes de cada commit revisé el cambio con `git diff` para comprobar que solo entraba lo que yo quería.
 
 ## Decisiones
 
