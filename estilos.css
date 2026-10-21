@@ -64,3 +64,17 @@ footer {
     padding: 15px;
     color: #777;
 }
+
+/* En pantallas pequeñas */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+}
